@@ -1,0 +1,156 @@
+/*Personal Page
+-------------------------------------------------------------------------------*/
+.comment-notification{
+	padding: 0;
+}
+
+.comment-answer{
+	background-color: #ededed;
+	margin-top: 2em;
+	margin-bottom: 0;
+	padding-top: 0.5em;
+}
+
+.comment-answer a{
+	color: #000;
+}
+
+.comment-response{
+	width: 100%;
+	height: 2.5em;
+	margin-top: 2em;
+	padding-left: 1em;
+	border: none;
+}
+
+.comment-response:focus{
+	outline: none;
+	color: #000;
+}
+
+
+/*Group Page
+-------------------------------------------------------------------------------*/
+#new-group{
+	background-color: #fff;
+	color: #ff838f;
+	border:none;
+}
+
+#new-group:hover{
+	color: #000;
+}
+
+
+/*Members*/
+.member-teacher{
+	font-weight: bolder;
+	text-decoration: underline;
+}
+
+.teacher-container:after{
+	content: "";
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+	background-color: #f5cc00;
+}
+
+.member-link{
+	color: #000;
+}
+
+.member-link:hover{
+	text-decoration: underline;
+}
+
+.member-link:hover span{
+	text-decoration: underline;
+}
+
+
+/*project*/
+#creator-link{
+	color: #ff838f;
+}
+
+#creator-link:hover{
+	color: #000;
+}
+
+/*new group*/
+.new-group-form {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.new-group-form *{
+	width: 200px;
+	display: block;
+	padding-left: 15px;	
+	margin-top: 20px;
+	background-color: #e8e8e8;
+	height: 50px;
+	border-radius: 10px;
+	border:1px solid #adadad;
+	outline: none;
+}
+
+.new-group-form *:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.new-group-form a{
+	background-color: #ff838f;
+	color: #fff;
+	border: none;
+	font-size: 1.25em;
+	line-height: 50px;
+	padding-left: 0;
+}
+
+/*Student gradecenter*/
+.grade-form{
+	width: 100%;
+	height: 300px;
+	background-color: #fff;
+}
+
+
+
+/*assignment editor
+-------------------------------------------------------------------------------*/
+.course-editor:hover:after{
+content:"Create new assignment +";
+}
+
+.assignment-sectionname{
+	height: 2.5em;
+	width: 100%;
+	 padding-left:20px;
+	 border: 1px solid #ccc;
+	 background-color: #ededed;
+	 margin-bottom: 1em;
+	 outline: none;
+}
+
+.assignment-paragraph{
+	vertical-align: top;
+	width: 100%;
+    height: 150px;
+    padding-left:20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #ededed;
+    outline: none;
+}
+
+.assignment-sectionname:hover{ background-color: #fff;}
+
+.assignment-paragraph:hover{ background-color: #fff;}
