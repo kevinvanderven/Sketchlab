@@ -93,7 +93,7 @@ blockquote {padding: 16px; background: #eee;}
   width:6.5em;
   border-bottom:2px solid #000;
   bottom:0;
-  left:-4.5em;
+  left:-6.5em;
   transition:transform .3s;
 }
 .main-menu .selected {
@@ -122,11 +122,11 @@ a:hover path{
   left:0;
 }
 
-.main-menu li:nth-child(1):hover ~ li:last-child    {transform:translateX(4.5em) !important;}
-.main-menu li:nth-child(1).selected ~ li:last-child {transform:translateX(4.5em);}
+.main-menu li:nth-child(1):hover ~ li:last-child    {transform:translateX(6.5em) !important;}
+.main-menu li:nth-child(1).selected ~ li:last-child {transform:translateX(6.5em);}
 
-.main-menu li:nth-child(2):hover ~ li:last-child    {transform:translateX(11em) !important;}
-.main-menu li:nth-child(2).selected ~ li:last-child {transform:translateX(11em);}
+.main-menu li:nth-child(2):hover ~ li:last-child    {transform:translateX(13em) !important;}
+.main-menu li:nth-child(2).selected ~ li:last-child {transform:translateX(13em);}
 
 .main-menu li:nth-child(3):hover ~ li:last-child    {transform:translateX(18em) !important;}
 .main-menu li:nth-child(3).selected ~ li:last-child {transform:translateX(18em);}
@@ -145,6 +145,7 @@ header{
 	padding-left: 50px;
 	z-index: 1000;
 }
+
 
 /*Logo will be animated*/
 .sketchlab-logo{
@@ -549,6 +550,46 @@ footer{
 	border-bottom: solid 1px #adadad;
 }
 
+#header-notification{
+	position: fixed;
+	height: 118px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-bottom: solid 1px #adadad;
+}
+
+.header-message{
+	width: 110%;
+	font-size: 0.75em;
+	line-height: 2em;
+	margin-left: -50px;
+	padding-left: 50px;
+	text-align: center;
+	background-color: #43c4f7;
+	color: #fff;
+}
+
+
+.header-message:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.header-message a{
+	color: #fff;
+	display: inline-block;
+	float: right;
+	font-size: 0.75em;
+	margin-right: 10%;
+	cursor: pointer;
+}
+
+.red{
+	background-color: #ff838f;
+}
+
+
 .login-screen{
 	display: block;
 	padding-top: 150px;
@@ -775,7 +816,9 @@ input[type="checkbox"]:checked + label:before {
   color:#000;
 }
 .main-menu-big .selected path,
-.main-menu-big .selected circle{
+.main-menu-big .selected circle,
+.main-menu-big .selected polygon,
+.main-menu-big .selected rect{
 	fill: #000;
 }
 
@@ -865,9 +908,22 @@ a:hover polygon{
 	padding-bottom: 16vh;
 }
 
+.notification-wrapper{
+	background-color: #e8e8e8;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	padding-top: 150px;
+	padding-bottom: 16vh;
+}
+
 .personal-menu-wrapper{
 	position: relative;
 	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 2200px;
 	min-height: 100%;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);	
 }
@@ -890,10 +946,15 @@ a:hover polygon{
 	border-bottom: solid 1px #adadad;
 }
 
+.personal-info h4{
+	text-align: left;
+	padding-left: 50px;
+}
+
 .personal-account{
 	position: relative;
 	width: 100%;
-	height: 350px;
+	height: auto;
 	border-bottom: solid 1px #adadad;
 }
 
@@ -916,6 +977,7 @@ a:hover polygon{
 	bottom: 0px;
 	overflow-y: scroll;
 	text-align: center;
+	background-color: #ededed;
 }
 /*Comments*/
 .comment-notification{
@@ -1169,6 +1231,16 @@ a:hover polygon{
 	color: #ff838f;
 }
 
+.pink:hover{
+	color: #808080;
+	cursor: pointer;
+}
+
+.pink:hover svg path{
+	fill: #808080;
+	cursor: pointer;
+}
+
 .pink svg path{
 	fill: #ff838f;
 }
@@ -1270,18 +1342,20 @@ a:hover polygon{
 	fill: #000;
 }
 
-.highcard:after{
-	position: absolute;
-	right: -15px;
-	top: -15px;
-	text-align: center;
-	line-height: 40px;
+/*card notification bubble*/
+.card-notification:after{
 	content: "1";
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	top: -15px;
+	right: -15px;
+	text-align: center;
+	line-height: 30px;
 	background-color: #43c4f7;
 	color: #fff;
+	cursor: pointer;
 }
 
 
@@ -1290,6 +1364,8 @@ a:hover polygon{
 
 .emptycontainer{
 	color: #808080;
+	display: block;
+	height: 250px;
 }
 
 
@@ -1376,7 +1452,7 @@ a:hover polygon{
 .project-information-wrapper{
 	position: relative;
 	width: 100%;
-	height: 300px;
+	height: 250px;
 }
 
 .exercise-thumbnail{
@@ -1488,6 +1564,12 @@ a:hover polygon{
 	border-bottom: solid 1px #adadad;
 }
 
+.group-info a{
+	position: absolute;
+	display: block;
+	bottom: 0;
+}
+
 .group-button{
 	text-align: center;
 	font-size: 1.5em;
@@ -1498,6 +1580,7 @@ a:hover polygon{
 	margin-right: auto;
 	border-radius: 10px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	background-color: #ff838f;
 	color: #fff;
 	cursor: pointer;
@@ -1505,7 +1588,7 @@ a:hover polygon{
 
 .group-button:hover{
 	color: #ff838f;
-	background-color: #fff;
+	background-color: transparent;
 	border: solid 1px #ff838f; 
 }
 
@@ -1676,14 +1759,14 @@ a:hover polygon{
 .cancel-button{
 	position: absolute;
 	text-align: center;
-	line-height: 48px;
+	line-height: 40px;
 	font-size: 20px;
-	width: 150px;
-	height: 50px;
+	width: 120px;
+	height: 42px;
 	background-color: #adadad;
 	color: #fff;
 	top: 35px;
-	right: 210px;
+	right: 177px;
 }
 
 .cancel-button:hover{
@@ -1694,10 +1777,10 @@ a:hover polygon{
 .save-button{
 	position: absolute;
 	text-align: center;
-	line-height: 48px;
+	line-height: 40px;
 	font-size: 20px;
-	width: 150px;
-	height: 50px;
+	width: 120px;
+	height: 42px;
 	background-color: #adadad;
 	color: #fff;
 	top: 35px;
@@ -1717,7 +1800,31 @@ a:hover polygon{
 	background-color: #fff;
 }
 
-.no-padding{padding: 0;}
+.no-padding{
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.assignment-container{
+	min-height: calc(100vh - 800px);
+	position: absolute;
+	width: 100%;
+	top: 80px;
+	bottom: 0px;
+	overflow-x: none;
+	overflow-y: scroll;
+	text-align: center;
+}
+
+.assignment-categories{
+	position: relative;
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+	border-bottom: solid 1px #adadad;
+}
 
 .assignment-column{
 	font-family: Menu, Helmet, Freesans, sans-serif;
@@ -1747,8 +1854,8 @@ a:hover polygon{
 	text-align: left;
 	vertical-align: top;
 	position: relative;
-	line-height: 10px;
-	height: 50px;
+	line-height: 20px;
+	height: 60px;
 	width: 100%;
 	border-left: solid 4px #adadad;
 	padding-left: 30px;
@@ -1804,9 +1911,29 @@ a:hover polygon{
 .deadline{
 	position: absolute;
 	width: 100%;
-	bottom: -1px;
-	border-top:  solid 1px red;
+	height: 50px;
+	background-color: #adadad;
+	top: 500px;
 	z-index: 10;
+	color: #fff;
+}
+
+.deadline:hover{
+	background-color: #fff;
+	border-top:solid 1px #adadad;
+	border-bottom:solid 1px #adadad;
+	color: #adadad;
+}
+
+.deadline:after{
+	content: "deadline Design Sketching 1";
+	position: absolute;
+	top: 15px;
+	left: 40%;
+}
+
+.deadline:hover:after{
+	content: "finished Design Sketching 1";
 }
 
 
@@ -1840,8 +1967,9 @@ a:hover polygon{
 	height: 60px;
 }
 
-#course-navigation a{
+#course-navigation a:hover{
 	position: static;
+	text-decoration: underline;
 }
 
 .coursebutton{
@@ -1880,12 +2008,100 @@ a:hover polygon{
 
 .lockcourse path{fill:#7f7f7f;}
 
+.course-section{
+	padding-bottom: 100px;
+	text-align: left;
+}
+
+.course-section h2{
+	text-align: left;
+	font-size: 1.25em;
+}
+
+.course-section p{
+	text-align: left;
+	column-count: 3;
+	max-width: 800px;
+}
+
 .course-video{
 	width: 100%;
 	margin-top: 15px;
 	margin-bottom: 30px;
 	border: solid 1px #d6d6d6;
+	background-color: #fff;
 }
+
+.course-video:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	cursor: pointer;
+}
+
+.float-left{
+	position: relative;
+	float: none;
+	margin-left: 0;
+	margin-right: 30px;
+	margin-top: 20px;
+}
+
+.upload-assignment{
+	width: 100%;
+	height: 400px;
+	font-size: 1.5em;
+	margin-top: 20px;
+	padding-top: 150px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border: dashed 2px #22b473;
+	text-align: center;
+}
+
+.upload-assignment:hover{
+	background-color: #22b473;
+	color: #fff;
+	cursor: pointer;
+}
+
+.close-background{
+	background-color: none;
+}
+
+#help-field{
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+	line-height: 20px;
+	text-align: top;
+	border: solid 2px #fff;
+}
+
+#help-submit{
+	font-size: 0.8em;
+	color: #808080;
+	border: none;
+	background: none;
+}
+
+
+/*Student Assistent
+----------------------------------------------------------------*/
+.assistant-token{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	left: 230px;
+	background-color: #f5cc00;
+	z-index: 10000;
+}
+
+
+
+
+
+
+
 
 
 
@@ -1921,12 +2137,30 @@ a:hover polygon{
 }
 
 
-@media all and (max-width: 1100px){
+@media all and (max-width: 1200px){
+
 
 /*Main-page
 ----------------------------------------------------------------*/
 .banner{
 	height: 600px;
+}
+
+.banner-image{
+	height: 600px;
+}
+
+.banner-image h1{
+	width: 80%;
+	font-size: 3em;
+	margin: auto;
+}
+
+.banner-image h3{
+	width: 80%;
+	font-size: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .instruction-wrapper{
@@ -1955,15 +2189,32 @@ a:hover polygon{
 	margin-bottom: 40px;
 }
 
+/*login-page
+----------------------------------------------------------------*/
+
+.login-screen h1{
+	width: 80%;
+	font-size: 3em;
+	margin: auto;
+}
+
+.login-screen h3{
+	width: 80%;
+	font-size: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 
 /*Personal-page
 ----------------------------------------------------------------*/
+
 .personal-wrapper{
 	position: initial;
 	padding-top:0;
 	padding-left:0;
 	padding-right:0;
-	padding-bottom: 50px;
+	padding-bottom:0;
 }
 
 .personal-menu-wrapper{
@@ -1972,8 +2223,9 @@ a:hover polygon{
 
 .personal-menu-wrapper aside{
 	position: initial;
-	height: 500px;
+	height: 575px;
 	width: 100%;
+	margin-top: 100px;
 	border: none;
 }
 
@@ -2004,27 +2256,44 @@ a:hover polygon{
 	text-align: center;
 }
 
+
 #personal-footer{
 	position: initial;
 }
 
-/*Project-page
+/*assignments
 ----------------------------------------------------------------*/
-.project-information-wrapper{
-	height: 500px;
+.assignment-container{
+	position: initial;
+	width: 100%;
+	height: auto;
+	overflow-y: visible;
+	text-align: center;
 }
 
+.assignment-categories{
+	position: relative;
+	width: 100%;
+	height: 80px;
+	margin-top: 80px;
+	background-color: #fff;
+	border-bottom: solid 1px #adadad;
+}
+
+.course-section p{
+	column-count: 2;
+}
+
+/*Project-page
+----------------------------------------------------------------*/
 .exercise-thumbnail{
 	left: 40px;
 }
-.project-info{top: 250px;}
-.project-avatar{top: 250px;}
 
 /*groups
 ----------------------------------------------------------------*/
 .group-info{
 	height: 250px;
-	padding-top: 100px;
 }
 
 
@@ -2033,14 +2302,33 @@ a:hover polygon{
 
 
 
-@media all and (max-width: 660px){
+@media all and (max-width: 750px){
+
+/*All*/
+#header-login > ul > li > a > span{
+	display: none;
+}
+
+#header-login > ul{
+	width: 100px;
+}
+
+#header-login > ul > li{
+	width: 30px;
+}
+
+.main-menu-big li:last-child{
+	display: none;
+}
+
+.main-menu li:last-child{
+	display: none;
+}
+
+.hide{display: none;}
 
 /*Main-page
 ----------------------------------------------------------------*/
-.banner{
-	height: 800px;
-}
-
 .inspiration-wrapper{
 	height: 2100px;
 }
@@ -2049,8 +2337,13 @@ a:hover polygon{
 	width: 90%;
 }
 
+.instruction-wrapper{width: 100%;}
 
-
+/*Assignments
+----------------------------------------------------------------*/
+.course-section p{
+	column-count: 1;
+}
 
 }
 

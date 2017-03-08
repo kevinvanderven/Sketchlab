@@ -12,35 +12,26 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Sketchlab ~ Notifications</title>
+	<title>Sketchlab ~ Login</title>
 
 	<!--  Mobile Viewport
-	http://j.mp/mobileviewport & http://davidbcalhoun.com/2010/viewport-metatag
-	device-width : Occupy full width of the screen in its current orientation
-	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width (wrong for most sites)
+	Standard scaling and width minimum of 600 px on mobile devices
 	-->
-	<meta name="viewport" content="width=500, initial-scale=1">
+	<meta name="viewport" content="width=720, initial-scale=1">
 
-	<!-- Use Iconifyer to generate all the favicons and touch icons you need: http://iconifier.net -->
+	<!-- Will use Iconifyer to generate all the favicons and touch icons http://iconifier.net -->
 	<link rel="shortcut icon" href="favicon.ico" />
 
-	<!-- concatenate and minify for production -->
+	<!-- Concatenate, combine and minify for production -->
 	<link rel="stylesheet" href="assets/css/reset.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 
 </head>
 
 <body>
-<a href="personal.html"><div class="notification-overlay"></div></a>
-	<div class="notification-window"><a href="personal.html" class="close-button">&#10006;</a>
-		You received <span class="pink">35 Likes <svg class="icon-heart"><path d="M13.1,3c-1.4-1.4-3.6-1.4-5,0L7.5,3.7L6.8,3c-1.4-1.4-3.6-1.4-5,0c-1.4,1.4-1.4,3.6,0,5l0.7,0.7l5,5l5-5L13.1,8 C14.5,6.6,14.5,4.4,13.1,3z"/></svg><br></span>
-		and <span class="blue">1 comment<svg class="icon-comment"><path d="M12.3,10.4c1-0.9,1.5-2.2,1.5-3.5c0-3-2.9-5.4-6.5-5.4S0.9,3.9,0.9,6.9s2.9,5.4,6.5,5.4c1.2,0,2.4-0.3,3.4-0.8
-		l1.1,1.1l1.5,1.5l-0.6-2L12.3,10.4z"/></svg><br></span>
-		when you were away.
-	</div>
-
-<header id="header-login">
+<!-- Alternative header -->
+<header id="header-notification">
+<div class="header-message">You have a new comment <a href="personal.html">&#10005;</a></div>
 <!-- Logo -->
 <a href="index.html" class="sketchlab-logo">Sketchlab</a>
 
@@ -76,11 +67,12 @@
 </header>
 
 
-
-<div class="personal-wrapper">
+<!--Wraps sidebar -->
+<div class="notification-wrapper">
 	         <div class="personal-menu-wrapper">
 	         	<aside>
 	         		<div class="personal-info">
+	         			<!-- Avatar link -->
 	         			<div class="change-avatar">+</div>
 	         			<h1>Kevin van der Ven</h1>
 	         			<h2>Utwente Industrial Design</h2>
@@ -91,7 +83,7 @@
 	         			<a href="/">Delete Account</a>
 	         		</div>
 	         	</aside>
-	         	
+	         	<!-- Secondary menu -->
 	         		<div class="personal-menu-horizontal">
 	         			<ul class="menu">
 	         				<li class="selected"><a href="">Notifications</a></li>
@@ -100,13 +92,16 @@
 	         				<li><!-- this is truly ugly --></li>
 	         			</ul>
 	         		</div>
+	         		<!-- Wrapper for content -->
 	         			<div class="content-container">
+	         			<!-- Wrapper for comment, newest comment indicates new comments -->
 	         				<div class="comment-notification newest-comment">
 	         					<div class="comment-title">Comment on <a href="">Cilinder Construction</a> <span>new comment</span></div>
 	         					<h4><a href="">Mango Alpha</a></h4>
 	         					<p>Looks amazing, especially that dynamic background!</p>
 	         					<span class="comment-time">Just Now</span>
 	         				</div>
+	         				<!-- Wrapper for comment -->
 	         				<div class="comment-notification">
 	         					<div class="comment-title">3 Comments on <a href="">Cilinder Construction</a> <span>delete comments</span></div>
 	         					<h4><a href="">Tonia Babel</a></h4>
@@ -119,6 +114,7 @@
 	         					<p>Gave you some visual Feedback</p>
 	         					<span class="comment-time">2 weeks ago</span>
 	         				</div>
+	         				<!-- Wrapper for comment -->
 	         				<div class="comment-notification">
 	         					<div class="comment-title">Comment on <a href="">Cilinder Construction</a> <span>delete comments</span></div>
 	         					<h4><a href="">Maarten Albanie</a></h4>
